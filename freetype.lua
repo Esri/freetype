@@ -167,13 +167,15 @@ if (_PLATFORM_IOS) then
 end
 
 if (_PLATFORM_LINUX) then
+  -- additional files needed for fontconfig, which is only needed on Linux
+  files {
+    "src/base/ftbdf.c",
+    "src/base/ftsnames.c",
+  }
 end
 
 if (_PLATFORM_MACOS) then
 end
 
 if (_PLATFORM_WINDOWS) then
-end
-
-if (_PLATFORM_WINUWP) then
 end
